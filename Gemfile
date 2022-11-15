@@ -51,7 +51,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # ここを追加
   gem 'pry-byebug'
-   gem 'annotate'#, git: 'https://github.com/ctran/annotate_models.git'
+  gem 'annotate', '~> 2.7'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
