@@ -8,4 +8,6 @@
 <% if flash[:notice] %>
   <div class="alert alert-primary"><%= flash[:notice] %></div>
 <% end %>
+
 <%= render @board %>
+<%= render partial: 'comment_form', locals: { comment: @comment } %>

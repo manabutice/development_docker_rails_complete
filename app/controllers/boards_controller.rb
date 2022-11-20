@@ -26,7 +26,6 @@ class BoardsController < ApplicationController
 
   def show
     @comment = @board.comments.new
-    binding.pry
   end
 
   def edit
