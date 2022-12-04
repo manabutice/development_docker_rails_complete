@@ -3,12 +3,10 @@ class BoardsController < ApplicationController
 
   def index
     @boards = Board.page(params[:page])
-    # @boards = Kaminari.paginate_array(@boards).page(params[:page]).per(10)
   end
 
   def new
     @board = Board.new(flash[:board])
-    # console.log(board);
   end
 
   def create
@@ -29,11 +27,18 @@ class BoardsController < ApplicationController
   end
 
   def edit
+    @board.attributes = flash[:board] if flash[:board]
   end
 
   def update
-    @board.update(board_params)
-    redirect_to @board
+    if @board.update(board_params)
+      redirect_to @board
+    else
+      redirect_to :back, flash: {
+        board: @board,
+        error_messages: @board.errors.full_messages
+      }
+    end
   end
 
   def destroy
@@ -44,7 +49,7 @@ class BoardsController < ApplicationController
   private
 
   def board_params
-    params.require(:board).permit(:name, :title, :body)
+    params.require(:board).permit(:name, :title, :body, tag_ids: [])
   end
 
   def set_target_board
