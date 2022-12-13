@@ -63,6 +63,7 @@ GEM
     arel (7.1.4)
     autoprefixer-rails (10.4.7.0)
       execjs (~> 2)
+    bcrypt (3.1.18)
     bindex (0.8.1)
     bootstrap (4.0.0)
       autoprefixer-rails (>= 6.0.3)
@@ -204,6 +205,7 @@ PLATFORMS
 
 DEPENDENCIES
   annotate (~> 2.7)
+  bcrypt (~> 3.1.7)
   bootstrap (~> 4.0.0)
   byebug
   coffee-rails (~> 4.2)
