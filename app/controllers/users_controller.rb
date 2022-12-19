@@ -17,7 +17,6 @@ class UsersController < ApplicationController
   end
 
   def me
-    binding.pry
   end
 
   private
