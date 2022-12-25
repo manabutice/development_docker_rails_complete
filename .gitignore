@@ -16,3 +16,7 @@
 # Ignore Byebug command history file.
 .byebug_history
 node_modules
+
+.project
+.settings/
+/path/to/file
