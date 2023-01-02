@@ -1,0 +1,76 @@
+have_library: checking for -lpthread... -------------------- yes
+
+"clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -L/usr/local/lib     -lruby.2.7   "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+"clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -L/usr/local/lib     -lruby.2.7 -lpthread   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+have_library: checking for -lobjc... -------------------- yes
+
+"clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -L/usr/local/lib    -lpthread  -lruby.2.7 -lobjc -lpthread   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: 
+15: int t(void) { ; return 0; }
+/* end */
+
+--------------------
+
+block in append_ldflags: checking for whether -Wl,--exclude-libs=ALL  is accepted as LDFLAGS... -------------------- no
+
+"clang -o conftest -I/Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/libv8-node-16.10.0.0-x86_64-darwin/vendor/v8/include -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/x86_64-darwin21 -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0 -I. -I/Users/murakamimanabu/.rbenv/versions/2.7.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -g -O2 -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/libv8-node-16.10.0.0-x86_64-darwin/vendor/v8/x86_64-darwin/libv8/obj/libv8_monolith.a  -stdlib=libc++ -L. -L/Users/murakamimanabu/.rbenv/versions/2.7.6/lib  -fstack-protector-strong -L/usr/local/lib    -lobjc -lpthread  -lruby.2.7 -Wl,--exclude-libs=ALL   "
+ld: unknown option: --exclude-libs=ALL
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+--------------------
+

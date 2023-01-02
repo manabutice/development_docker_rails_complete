@@ -1,0 +1,20 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+/Users/murakamimanabu/.rbenv/versions/2.7.6/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20221227-21767-xfs7pz.rb extconf.rb
+checking for -lpthread... yes
+checking for -lobjc... yes
+checking for whether -Wl,--exclude-libs=ALL  is accepted as LDFLAGS... no
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+make "DESTDIR=" clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+make "DESTDIR="
+compiling mini_racer_extension.cc
+clang: warning: argument unused during compilation: '-rdynamic' [-Wunused-command-line-argument]
+linking shared-object mini_racer_extension.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 mini_racer_extension.bundle ./.gem.20221227-21767-18cto4c

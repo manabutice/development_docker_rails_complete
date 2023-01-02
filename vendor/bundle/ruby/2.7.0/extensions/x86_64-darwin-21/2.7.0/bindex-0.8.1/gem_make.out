@@ -1,0 +1,16 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/murakamimanabu/.rbenv/versions/2.7.6/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20221227-21767-p1ev2r.rb extconf.rb
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20221227-21767-1ttygf1/skiptrace/internal

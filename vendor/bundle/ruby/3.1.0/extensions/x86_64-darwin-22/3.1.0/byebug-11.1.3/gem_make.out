@@ -1,0 +1,22 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+/Users/murakamimanabu/.rbenv/versions/3.1.3/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/3.1.3/lib/ruby/site_ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-iqz3s sitelibdir\=./.gem.20221226-67340-iqz3s clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-iqz3s sitelibdir\=./.gem.20221226-67340-iqz3s
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.bundle
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-iqz3s sitelibdir\=./.gem.20221226-67340-iqz3s install
+/usr/bin/install -c -m 0755 byebug.bundle ./.gem.20221226-67340-iqz3s/byebug
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/byebug-11.1.3/ext/byebug
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-iqz3s sitelibdir\=./.gem.20221226-67340-iqz3s clean

@@ -1,0 +1,104 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/puma-3.12.6/ext/puma_http11
+/Users/murakamimanabu/.rbenv/versions/3.1.3/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/3.1.3/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/puma-3.12.6/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-z35q95 sitelibdir\=./.gem.20221226-67340-z35q95 clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/puma-3.12.6/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-z35q95 sitelibdir\=./.gem.20221226-67340-z35q95
+compiling http11_parser.c
+ext/puma_http11/http11_parser.c:44:18: warning: unused variable 'puma_parser_en_main' [-Wunused-const-variable]
+static const int puma_parser_en_main = 1;
+                 ^
+1 warning generated.
+compiling io_buffer.c
+compiling mini_ssl.c
+mini_ssl.c:89:8: warning: 'DH_new' is deprecated [-Wdeprecated-declarations]
+  dh = DH_new();
+       ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/dh.h:199:1: note: 'DH_new' has been explicitly marked deprecated here
+OSSL_DEPRECATEDIN_3_0 DH *DH_new(void);
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:182:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+#   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+                                                ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+#     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+                                                   ^
+mini_ssl.c:104:34: warning: 'DH_set0_pqg' is deprecated [-Wdeprecated-declarations]
+  if (p == NULL || g == NULL || !DH_set0_pqg(dh, p, NULL, g)) {
+                                 ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/dh.h:255:1: note: 'DH_set0_pqg' has been explicitly marked deprecated here
+OSSL_DEPRECATEDIN_3_0 int DH_set0_pqg(DH *dh, BIGNUM *p, BIGNUM *q, BIGNUM *g);
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:182:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+#   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+                                                ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+#     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+                                                   ^
+mini_ssl.c:105:5: warning: 'DH_free' is deprecated [-Wdeprecated-declarations]
+    DH_free(dh);
+    ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/dh.h:200:1: note: 'DH_free' has been explicitly marked deprecated here
+OSSL_DEPRECATEDIN_3_0 void DH_free(DH *dh);
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:182:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+#   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+                                                ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+#     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+                                                   ^
+mini_ssl.c:193:18: warning: 'EC_KEY_new_by_curve_name' is deprecated [-Wdeprecated-declarations]
+  EC_KEY *ecdh = EC_KEY_new_by_curve_name(NID_secp521r1);
+                 ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/ec.h:998:1: note: 'EC_KEY_new_by_curve_name' has been explicitly marked deprecated here
+OSSL_DEPRECATEDIN_3_0 EC_KEY *EC_KEY_new_by_curve_name(int nid);
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:182:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+#   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+                                                ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+#     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+                                                   ^
+mini_ssl.c:196:5: warning: 'EC_KEY_free' is deprecated [-Wdeprecated-declarations]
+    EC_KEY_free(ecdh);
+    ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/ec.h:1003:1: note: 'EC_KEY_free' has been explicitly marked deprecated here
+OSSL_DEPRECATEDIN_3_0 void EC_KEY_free(EC_KEY *key);
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:182:49: note: expanded from macro 'OSSL_DEPRECATEDIN_3_0'
+#   define OSSL_DEPRECATEDIN_3_0                OSSL_DEPRECATED(3.0)
+                                                ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+#     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+                                                   ^
+mini_ssl.c:220:27: warning: 'DTLSv1_method' is deprecated [-Wdeprecated-declarations]
+  conn->ctx = SSL_CTX_new(DTLSv1_method());
+                          ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/ssl.h:2039:1: note: 'DTLSv1_method' has been explicitly marked deprecated here
+OSSL_DEPRECATEDIN_1_1_0 __owur const SSL_METHOD *DTLSv1_method(void); /* DTLSv1.0 */
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:204:49: note: expanded from macro 'OSSL_DEPRECATEDIN_1_1_0'
+#   define OSSL_DEPRECATEDIN_1_1_0              OSSL_DEPRECATED(1.1.0)
+                                                ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/openssl/include/openssl/macros.h:62:52: note: expanded from macro 'OSSL_DEPRECATED'
+#     define OSSL_DEPRECATED(since) __attribute__((deprecated))
+                                                   ^
+mini_ssl.c:250:40: warning: function 'raise_error' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+void raise_error(SSL* ssl, int result) {
+                                       ^
+7 warnings generated.
+compiling puma_http11.c
+linking shared-object puma/puma_http11.bundle
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/puma-3.12.6/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-z35q95 sitelibdir\=./.gem.20221226-67340-z35q95 install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20221226-67340-z35q95/puma
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/puma-3.12.6/ext/puma_http11
+make DESTDIR\= sitearchdir\=./.gem.20221226-67340-z35q95 sitelibdir\=./.gem.20221226-67340-z35q95 clean

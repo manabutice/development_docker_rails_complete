@@ -1,0 +1,22 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+/Users/murakamimanabu/.rbenv/versions/3.1.3/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/3.1.3/lib/ruby/site_ruby/3.1.0 extconf.rb
+checking for -lpthread... yes
+checking for -lobjc... yes
+checking for whether -Wl,--exclude-libs=ALL  is accepted as LDFLAGS... no
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+make DESTDIR\= sitearchdir\=./.gem.20221226-76722-x2dtzo sitelibdir\=./.gem.20221226-76722-x2dtzo clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+make DESTDIR\= sitearchdir\=./.gem.20221226-76722-x2dtzo sitelibdir\=./.gem.20221226-76722-x2dtzo
+compiling mini_racer_extension.cc
+clang: warning: argument unused during compilation: '-rdynamic' [-Wunused-command-line-argument]
+linking shared-object mini_racer_extension.bundle
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+make DESTDIR\= sitearchdir\=./.gem.20221226-76722-x2dtzo sitelibdir\=./.gem.20221226-76722-x2dtzo install
+/usr/bin/install -c -m 0755 mini_racer_extension.bundle ./.gem.20221226-76722-x2dtzo
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/3.1.0/gems/mini_racer-0.6.3/ext/mini_racer_extension
+make DESTDIR\= sitearchdir\=./.gem.20221226-76722-x2dtzo sitelibdir\=./.gem.20221226-76722-x2dtzo clean

@@ -26,4 +26,9 @@ class User < ApplicationRecord
     }
   validates :password,
     length: { minimum: 8 }
+
+  def age
+    now = Time.zone.now
+    (now.strftime('%Y%m%d').to_i - birthday.strftime('%Y%m%d').to_i) / 10000
+  end
 end

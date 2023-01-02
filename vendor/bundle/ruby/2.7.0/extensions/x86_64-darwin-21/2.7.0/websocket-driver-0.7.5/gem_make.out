@@ -1,0 +1,16 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/Users/murakamimanabu/.rbenv/versions/2.7.6/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20221227-21767-sigau3.rb extconf.rb
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 websocket_mask.bundle ./.gem.20221227-21767-v5v79e

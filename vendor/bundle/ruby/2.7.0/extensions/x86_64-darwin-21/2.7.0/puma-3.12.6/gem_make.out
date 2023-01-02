@@ -1,0 +1,35 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+/Users/murakamimanabu/.rbenv/versions/2.7.6/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20221227-21767-c2lrh4.rb extconf.rb
+checking for BIO_read() in -lcrypto... yes
+checking for SSL_CTX_new() in -lssl... yes
+checking for openssl/bio.h... yes
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+make "DESTDIR=" clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+make "DESTDIR="
+compiling http11_parser.c
+compiling io_buffer.c
+compiling mini_ssl.c
+mini_ssl.c:220:27: warning: 'DTLSv1_method' is deprecated [-Wdeprecated-declarations]
+  conn->ctx = SSL_CTX_new(DTLSv1_method());
+                          ^
+/Users/murakamimanabu/.rbenv/versions/2.7.6/openssl/include/openssl/ssl.h:1905:1: note: 'DTLSv1_method' has been explicitly marked deprecated here
+DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
+^
+/Users/murakamimanabu/.rbenv/versions/2.7.6/openssl/include/openssl/opensslconf.h:163:34: note: expanded from macro 'DEPRECATEDIN_1_1_0'
+# define DEPRECATEDIN_1_1_0(f)   DECLARE_DEPRECATED(f)
+                                 ^
+/Users/murakamimanabu/.rbenv/versions/2.7.6/openssl/include/openssl/opensslconf.h:121:55: note: expanded from macro 'DECLARE_DEPRECATED'
+#   define DECLARE_DEPRECATED(f)    f __attribute__ ((deprecated));
+                                                      ^
+1 warning generated.
+compiling puma_http11.c
+linking shared-object puma/puma_http11.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 puma_http11.bundle ./.gem.20221227-21767-io1ama/puma

@@ -1,0 +1,58 @@
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mysql2-0.4.10/ext/mysql2
+/Users/murakamimanabu/.rbenv/versions/2.7.6/bin/ruby -I /Users/murakamimanabu/.rbenv/versions/2.7.6/lib/ruby/2.7.0 -r ./siteconf20221227-21767-r5hu9t.rb extconf.rb
+checking for rb_absint_size()... yes
+checking for rb_absint_singlebit_p()... yes
+checking for ruby/thread.h... yes
+checking for rb_thread_call_without_gvl() in ruby/thread.h... yes
+checking for rb_thread_blocking_region()... no
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for rb_big_cmp()... yes
+-----
+Using mysql_config at /usr/local/bin/mysql_config
+-----
+checking for mysql.h... yes
+checking for errmsg.h... yes
+checking for SSL_MODE_DISABLED in mysql.h... yes
+checking for SSL_MODE_PREFERRED in mysql.h... yes
+checking for SSL_MODE_REQUIRED in mysql.h... yes
+checking for SSL_MODE_VERIFY_CA in mysql.h... yes
+checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... yes
+checking for MYSQL.net.vio in mysql.h... yes
+checking for MYSQL.net.pvio in mysql.h... no
+checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... yes
+-----
+Setting rpath to /usr/local/Cellar/mysql/8.0.31/lib
+-----
+creating Makefile
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mysql2-0.4.10/ext/mysql2
+make "DESTDIR=" clean
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mysql2-0.4.10/ext/mysql2
+make "DESTDIR="
+compiling client.c
+client.c:778:14: warning: incompatible function pointer types passing 'VALUE (void *)' (aka 'unsigned long (void *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
+  rb_rescue2(do_send_query, (VALUE)&args, disconnect_and_raise, self, rb_eException, (VALUE)0);
+             ^~~~~~~~~~~~~
+/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:1990:25: note: passing argument to parameter here
+VALUE rb_rescue2(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE,...);
+                        ^
+client.c:786:16: warning: incompatible function pointer types passing 'VALUE (void *)' (aka 'unsigned long (void *)') to parameter of type 'VALUE (*)(VALUE)' (aka 'unsigned long (*)(unsigned long)') [-Wincompatible-function-pointer-types]
+    rb_rescue2(do_query, (VALUE)&async_args, disconnect_and_raise, self, rb_eException, (VALUE)0);
+               ^~~~~~~~
+/Users/murakamimanabu/.rbenv/versions/2.7.6/include/ruby-2.7.0/ruby/ruby.h:1990:25: note: passing argument to parameter here
+VALUE rb_rescue2(VALUE(*)(VALUE),VALUE,VALUE(*)(VALUE,VALUE),VALUE,...);
+                        ^
+2 warnings generated.
+compiling infile.c
+compiling mysql2_ext.c
+compiling result.c
+compiling statement.c
+linking shared-object mysql2/mysql2.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/murakamimanabu/udemy_docker_rails/vendor/bundle/ruby/2.7.0/gems/mysql2-0.4.10/ext/mysql2
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 mysql2.bundle ./.gem.20221227-21767-1oq2h1e/mysql2

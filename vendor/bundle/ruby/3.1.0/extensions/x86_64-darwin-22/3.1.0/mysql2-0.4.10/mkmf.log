@@ -1,0 +1,710 @@
+have_func: checking for rb_absint_size()... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return !!argv[argc];
+6: }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_size; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_absint_singlebit_p()... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_absint_singlebit_p; return !p; }
+/* end */
+
+--------------------
+
+have_header: checking for ruby/thread.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <ruby/thread.h>
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_call_without_gvl() in ruby/thread.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <ruby/thread.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     int (* volatile tp)(void)=(int (*)(void))&t;
+11:     printf("%d", (*tp)());
+12:   }
+13: 
+14:   return !!argv[argc];
+15: }
+16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_call_without_gvl; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_thread_blocking_region()... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+conftest.c:14:57: error: use of undeclared identifier 'rb_thread_blocking_region'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_thread_blocking_region; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+Undefined symbols for architecture x86_64:
+  "_rb_thread_blocking_region", referenced from:
+      _t in conftest-90450b.o
+ld: symbol(s) not found for architecture x86_64
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void rb_thread_blocking_region();
+15: int t(void) { rb_thread_blocking_region(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_wait_for_single_fd()... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+conftest.c:14:57: error: use of undeclared identifier 'rb_wait_for_single_fd'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void rb_wait_for_single_fd();
+15: int t(void) { rb_wait_for_single_fd(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_hash_dup()... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_dup; return !p; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_intern3()... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+conftest.c:14:57: error: use of undeclared identifier 'rb_intern3'
+int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_intern3; return !p; }
+                                                        ^
+1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_intern3; return !p; }
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: extern void rb_intern3();
+15: int t(void) { rb_intern3(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for rb_big_cmp()... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib     -lruby.3.1   "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     int (* volatile tp)(void)=(int (*)(void))&t;
+ 9:     printf("%d", (*tp)());
+10:   }
+11: 
+12:   return !!argv[argc];
+13: }
+14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_big_cmp; return !p; }
+/* end */
+
+--------------------
+
+have_header: checking for mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+/* end */
+
+--------------------
+
+have_header: checking for errmsg.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <errmsg.h>
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_DISABLED in mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_DISABLED;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_PREFERRED in mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_PREFERRED;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_REQUIRED in mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_REQUIRED;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_VERIFY_CA in mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_VERIFY_CA;
+/* end */
+
+--------------------
+
+have_const: checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)SSL_MODE_VERIFY_IDENTITY;
+/* end */
+
+--------------------
+
+have_struct_member: checking for MYSQL.net.vio in mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+conftest.c:6:39: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((MYSQL*)0)->net.vio - (char *)0;
+                                      ^ ~~~~~~~~~
+1 warning generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <mysql.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((MYSQL*)0)->net.vio - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return !!argv[argc];
+10: }
+/* end */
+
+--------------------
+
+have_struct_member: checking for MYSQL.net.pvio in mysql.h... -------------------- no
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+conftest.c:6:35: error: no member named 'pvio' in 'struct NET'; did you mean 'vio'?
+int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
+                                  ^~~~
+                                  vio
+/usr/local/Cellar/mysql/8.0.31/include/mysql/mysql_com.h:911:13: note: 'vio' declared here
+  MYSQL_VIO vio;
+            ^
+conftest.c:6:40: warning: performing pointer subtraction with a null pointer has undefined behavior [-Wnull-pointer-subtraction]
+int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
+                                       ^ ~~~~~~~~~
+1 warning and 1 error generated.
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <mysql.h>
+ 4: 
+ 5: /*top*/
+ 6: int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   return !!argv[argc];
+10: }
+/* end */
+
+--------------------
+
+have_const: checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... -------------------- yes
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <mysql.h>
+4: 
+5: /*top*/
+6: typedef int conftest_type;
+7: conftest_type conftestval = (int)MYSQL_ENABLE_CLEARTEXT_PLUGIN;
+/* end */
+
+--------------------
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Weverything  "
+error: include location '/usr/local/include' is unsafe for cross-compilation [-Werror,-Wpoison-system-directories]
+In file included from conftest.c:1:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/ruby.h:26:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:76:
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/intern/class.h:170:4: error: unknown command tag name [-Werror,-Wdocumentation-unknown-command]
+ * @internal
+   ^~~~~~~~~
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/intern/class.h:289:60: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_method_id(VALUE klass, ID mid, VALUE (*func)(ANYARGS), int arity);
+                                                           ^
+                                                                   void
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/intern/class.h:308:4: error: unknown command tag name [-Werror,-Wdocumentation-unknown-command]
+ * @shyouhei doesn't  understand why this  is not  the ::ID -taking  variant of
+   ^~~~~~~~~
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/intern/class.h:327:76: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_protected_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+                                                                           ^
+                                                                                   void
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/intern/class.h:340:74: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_private_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+                                                                         ^
+                                                                                 void
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/intern/class.h:353:73: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_singleton_method(VALUE obj, const char *mid, VALUE(*func)(ANYARGS), int arity);
+                                                                        ^
+                                                                                void
+In file included from conftest.c:1:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/ruby.h:26:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:77:
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/intern/vm.h:163:8: error: unknown command tag name [-Werror,-Wdocumentation-unknown-command]
+ *     @foo = 5
+       ^~~~
+In file included from conftest.c:1:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/ruby.h:26:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:78:
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/method.h:99:66: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_method(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+                                                                 ^
+                                                                         void
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/method.h:112:75: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_module_function(VALUE klass, const char *mid, VALUE (*func)(ANYARGS), int arity);
+                                                                          ^
+                                                                                  void
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/method.h:124:62: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+void rb_define_global_function(const char *mid, VALUE (*func)(ANYARGS), int arity);
+                                                             ^
+                                                                     void
+In file included from conftest.c:1:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/ruby.h:26:
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:270:1: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+RBIMPL_ANYARGS_DECL(rb_define_singleton_method, VALUE, const char *)
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:251:73: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _m3(__VA_ARGS__, VALUE(*)(ANYARGS), int); \
+                                                                        ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:271:1: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+RBIMPL_ANYARGS_DECL(rb_define_protected_method, VALUE, const char *)
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:251:73: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _m3(__VA_ARGS__, VALUE(*)(ANYARGS), int); \
+                                                                        ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:272:1: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+RBIMPL_ANYARGS_DECL(rb_define_private_method, VALUE, const char *)
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:251:73: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _m3(__VA_ARGS__, VALUE(*)(ANYARGS), int); \
+                                                                        ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:273:1: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+RBIMPL_ANYARGS_DECL(rb_define_module_function, VALUE, const char *)
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:251:73: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _m3(__VA_ARGS__, VALUE(*)(ANYARGS), int); \
+                                                                        ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:274:1: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+RBIMPL_ANYARGS_DECL(rb_define_global_function, const char *)
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:251:73: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _m3(__VA_ARGS__, VALUE(*)(ANYARGS), int); \
+                                                                        ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:275:1: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+RBIMPL_ANYARGS_DECL(rb_define_method_id, VALUE, ID)
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:251:73: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _m3(__VA_ARGS__, VALUE(*)(ANYARGS), int); \
+                                                                        ^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:276:1: error: this function declaration is not a prototype [-Werror,-Wstrict-prototypes]
+RBIMPL_ANYARGS_DECL(rb_define_method, VALUE, const char *)
+^
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/anyargs.h:251:73: note: expanded from macro 'RBIMPL_ANYARGS_DECL'
+RBIMPL_ANYARGS_ATTRSET(sym) static void sym ## _m3(__VA_ARGS__, VALUE(*)(ANYARGS), int); \
+                                                                        ^
+In file included from conftest.c:1:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby.h:38:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/ruby.h:27:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic.h:23:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/char.h:23:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/int.h:26:
+In file included from /Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/arithmetic/long.h:42:
+/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/internal/special_consts.h:148:18: error: implicit conversion changes signedness: 'int' to 'unsigned long' [-Werror,-Wsign-conversion]
+    return obj & ~RUBY_Qnil;
+               ~ ^~~~~~~~~~
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-bad-function-cast  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-conditional-uninitialized  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-covered-switch-default  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-declaration-after-statement  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-disabled-macro-expansion  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-documentation-unknown-command  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-missing-field-initializers  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-missing-variable-declarations  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-padded  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-reserved-id-macro  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-sign-conversion  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-static-in-inline  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-switch-enum  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-undef  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-unreachable-code  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1 -Werror -Wno-used-but-marked-unused  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+DYLD_FALLBACK_LIBRARY_PATH=.:/Users/murakamimanabu/.rbenv/versions/3.1.3/lib "clang -o conftest -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/x86_64-darwin22 -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0/ruby/backward -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include/ruby-3.1.0 -I. -I/usr/local/Cellar/mysql/8.0.31/include/mysql -I/Users/murakamimanabu/.rbenv/versions/3.1.3/include  -I/usr/local/opt/gmp/include -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT   -fdeclspec -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wdeprecated-declarations -Wdivision-by-zero -Wimplicit-function-declaration -Wimplicit-int -Wmisleading-indentation -Wpointer-arith -Wshorten-64-to-32 -Wwrite-strings -Wold-style-definition -Wmissing-noreturn -Wno-cast-function-type -Wno-constant-logical-operand -Wno-long-long -Wno-missing-field-initializers -Wno-overlength-strings -Wno-parentheses-equality -Wno-self-assign -Wno-tautological-compare -Wno-unused-parameter -Wno-unused-value -Wunused-variable -Wextra-tokens -Wundef  -fno-common -pipe -DFULL_SSL_MODE_SUPPORT -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused conftest.c  -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib -L. -L/Users/murakamimanabu/.rbenv/versions/3.1.3/lib  -fstack-protector-strong -L/usr/local/opt/gmp/lib -L/usr/local/lib    -L/usr/local/Cellar/mysql/8.0.31/lib -lmysqlclient -lz -L/usr/local/lib -lzstd -L/usr/local/opt/openssl@1.1/lib -lssl -lcrypto -lresolv  -lruby.3.1  -Wl,-rpath,/usr/local/Cellar/mysql/8.0.31/lib  "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+

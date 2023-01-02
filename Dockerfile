@@ -1,4 +1,4 @@
-FROM ruby:2.4.5
+FROM ruby:3.1.3
 RUN apt-get update -qq && apt-get install -y build-essential nodejs
 RUN mkdir /app
 WORKDIR /app
