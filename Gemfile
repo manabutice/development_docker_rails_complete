@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 ruby '3.1.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '6.1.3'
+gem 'rails', '6.1.3.1'
 # Use mysql as the database for Active Record
 gem 'mysql2', '~> 0.5.3'
 # Use Puma as the app server
@@ -21,7 +21,8 @@ gem 'bootstrap','~> 4.0.0'
 # gem 'kaminari-core', '~> 1.2', '>= 1.2.2'
 gem 'kaminari', git: 'https://github.com/kaminari/kaminari'
 gem 'rails-i18n'
-
+# gem 'rubygems-update', '~> 2.7', '>= 2.7.6'
+gem "mimemagic", "~> 0.3.10"
 gem 'mini_racer'
 # ここまで
 # Use jquery as the JavaScript library
@@ -44,6 +45,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.0.0'
   gem 'byebug', platform: :mri
   gem 'rails-flog', require: 'flog'
+  gem 'rails-controller-testing'
 end
 
 group :development do
